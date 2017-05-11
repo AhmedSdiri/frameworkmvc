@@ -8,6 +8,8 @@ function __autolaod($class_name){
         require_once($lib_path);
     }elseif (file_exists($controller_path)){
          require_once($controller_path);
+    }else {
+        throw new Exception("*****la class n'existe pas", 1);
     }
 }
 ?>
